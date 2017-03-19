@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText edNumber;
     private StringBuilder number;
 
-    private ImageButton backspace, startCall, endCall;
+    private ImageButton backspace, startCall, endCall, contacts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -180,5 +180,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        contacts = (ImageButton) findViewById(R.id.contacts);
+        contacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent("ro.pub.cs.systems.eim.lab04.ContactsManagerActivity");
+                intent.putExtra("phone", edNumber.getText().toString());
+
+                startActivity(intent);
+
+            }
+        });
     }
+
+
 }

@@ -107,6 +107,13 @@
             android:background="@color/colorWhite"
             android:id="@+id/endCall"
             />
+
+        <ImageButton
+            android:src= "@drawable/contacts"
+            android:background="@color/colorWhite"
+            android:id="@+id/contacts"
+            android:layout_gravity="center"
+            />
     </GridLayout>
 
 
